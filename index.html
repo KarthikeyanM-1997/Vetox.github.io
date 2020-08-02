@@ -214,71 +214,118 @@
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
             <div class="my-auto">
                 <h2 class="mb-5">Projects</h2>
-                <div class="resume-item d-flex flex-column flex-md-row mb-3">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0"><a target="_blank" href="https://url-shortener-frontend.netlify.app/">URL Shortener</a></h3>
-                        <div class="subheading mb-2">NodeJS, Expressjs, Angular, mongoDb</div>
-                        <div>A simple URL Shortener built on the MEAN stack with user authentication and url visits tracking.</div>
+                <div class="container">
+                    
+                    <div class='row p-5'>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('All')">All</button></div>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('Windows')">Windows</button></div>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('full-stack')">Full Stack</button></div>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('front-end')">Front End</button></div>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('Android')">Android</button></div>
                     </div>
                 </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-3">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/nodeSocketTest">Socket Based Cloud Chat Application</a></h3>
-                        <div class="subheading mb-2">nodeJS, expressjs, Sockets.io</div>
-                        <div>A sockets.io based chat application built with nodejs and expressjs.</div>
+                <div id="full-stack">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 full-stack">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://url-shortener-frontend.netlify.app/">URL Shortener</a></h3>
+                            <div class="subheading mb-2">NodeJS, Expressjs, Angular, mongoDb</div>
+                            <div>A simple URL Shortener built on the MEAN stack with user authentication and url visits tracking.</div>
+                        </div>
+                    </div>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 full-stack">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/nodeSocketTest">Socket Based Cloud Chat Application</a></h3>
+                            <div class="subheading mb-2">nodeJS, expressjs, Sockets.io</div>
+                            <div>A sockets.io based chat application built with nodejs and expressjs.</div>
+                        </div>
                     </div>
                 </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-3">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0"><a target="_blank" href="https://covid19-visualizer-karthikeyanm.netlify.app/">India COVID-19 Tracker</a></h3>
-                        <div class="subheading mb-2">Angular, Google Charts</div>
-                        <div>A simple implementation of Google Charts on up to date COVID-19 stats across India to visualize spread trends.</div>
+                <div id="front-end">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 front-end">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://covid19-visualizer-karthikeyanm.netlify.app/">India COVID-19 Tracker</a></h3>
+                            <div class="subheading mb-2">Angular, Google Charts</div>
+                            <div>A simple implementation of Google Charts on up to date COVID-19 stats across India to visualize spread trends.</div>
+                        </div>
                     </div>
                 </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-3">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/Virtual-On-Screen-Drum">Virtual On-Screen Drums</a></h3>
-                        <div class="subheading mb-2">OpenCV, Java</div>
-                        <div>A computer vision application which produces realistic drum beats according to
-                            the speed at which you hit a virtual drum on the screen.</div>
-                        <a target="_blank" href='http://www.iamkarthi.com/opencv-experiment-virtual-on-screen-drums/'><b>Blog Post</b></a>
+                <div id="front-end">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 front-end">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://simple-angular-notes-app.netlify.app/">Simple Angular Notes App</a></h3>
+                            <div class="subheading mb-2">Angular, Bootstrap</div>
+                            <div>A simple demonstration of Angulars component features to create a purely front end note taking app.</div>
+                        </div>
                     </div>
                 </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-3">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/MouseMacroMaker">Mouse Macro Maker</a></h3>
-                        <div class="subheading mb-2">jNativeHook, Java</div>
-                        <div>A windows application using jnativehook to implement a native mouse macro
-                            recorder with payback and edit features. Compatible with all native applications
-                            across Windows.</div>
-                        <p><a target="_blank" href='http://www.iamkarthi.com/tutorial-mouse-macro-maker-using-jnativehook/'><b>Blog Post</b></a>
+                
+                <div id="Windows">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/Virtual-On-Screen-Drum">Virtual On-Screen Drums</a></h3>
+                            <div class="subheading mb-2">OpenCV, Java</div>
+                            <div>A computer vision application which produces realistic drum beats according to
+                                the speed at which you hit a virtual drum on the screen.</div>
+                            <a target="_blank" href='http://www.iamkarthi.com/opencv-experiment-virtual-on-screen-drums/'><b>Blog Post</b></a>
+                        </div>
+                    </div>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/MouseMacroMaker">Mouse Macro Maker</a></h3>
+                            <div class="subheading mb-2">jNativeHook, Java</div>
+                            <div>A windows application using jnativehook to implement a native mouse macro
+                                recorder with payback and edit features. Compatible with all native applications
+                                across Windows.</div>
+                            <p><a target="_blank" href='http://www.iamkarthi.com/tutorial-mouse-macro-maker-using-jnativehook/'><b>Blog Post</b></a>
+                        </div>
+                    </div>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/electron-video-converter">Electron MP4 to HLS converter</a></h3>
+                            <div class="subheading mb-2">NodeJS, Angular, Electron, ffmpeg</div>
+                            <div>A cross-platform video converter application to convert mp4 to .m3u8 format using FFMPEG.</div>
+                        </div>
+                    </div>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/SpellingBeeTrainer">Spelling Bee Trainer</a></h3>
+                            <div class="subheading mb-2">Java</div>
+                            <div>A Java based spelling bee trainer written to help students prepare for the Spartan Spelling Bee.</div>
+                        </div>
                     </div>
                 </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-3">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/electron-video-converter">Electron MP4 to HLS converter</a></h3>
-                        <div class="subheading mb-2">NodeJS, Angular, Electron, ffmpeg</div>
-                        <div>A cross-platform video converter application to convert mp4 to .m3u8 format using FFMPEG.</div>
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-3">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/SpellingBeeTrainer">Spelling Bee Trainer</a></h3>
-                        <div class="subheading mb-2">Java</div>
-                        <div>A Java based spelling bee trainer written to help students prepare for the Spartan Spelling Bee.</div>
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-3">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/OnlineDictionary">Android Dictionary</a></h3>
-                        <div class="subheading mb-2">Java, Android SDK</div>
-                        <div>An Android Dictionary app. Retrieves definitions of words from dictionary.com's free API.</div>
-                        <a target="_blank" href='http://www.iamkarthi.com/java-dictionary-application-using-json/'><b>Blog Post</b></a>
+                <div id="Android">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Android">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/OnlineDictionary">Android Dictionary</a></h3>
+                            <div class="subheading mb-2">Java, Android SDK</div>
+                            <div>An Android Dictionary app. Retrieves definitions of words from dictionary.com's free API.</div>
+                            <a target="_blank" href='http://www.iamkarthi.com/java-dictionary-application-using-json/'><b>Blog Post</b></a>
+                        </div>
                     </div>
                 </div>
                 
             </div>
         </section>
+
+        <script>
+            function filter(val){
+                $("#Android").hide();
+                $("#Windows").hide();
+                $("#full-stack").hide();
+                $("#front-end").hide();
+                if(val === "All"){
+                    $("#Android").show();
+                    $("#Windows").show();
+                    $("#full-stack").show();
+                    $("#front-end").show();
+                }
+                else{
+                    $("#" + val ).show();    
+                }
+            }
+        </script>
+
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
             <div class="my-auto">
                 <h2 class="mb-5">Skills</h2>
