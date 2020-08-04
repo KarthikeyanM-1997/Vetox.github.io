@@ -18,6 +18,19 @@
     <link rel="stylesheet" target="_blank" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <!-- Custom styles for this template -->
     <link target="_blank" href="css/resume.min.css" rel="stylesheet">
+    
+    <style>
+    .zoom {
+      background-color: orange;
+      transition: transform .2s; /* Animation */
+      margin: 0 auto;
+    }
+
+    .zoom:hover {
+      transform: scale(2) translate(-100px, 0px); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -37,16 +50,16 @@
                     <a class="nav-link js-scroll-trigger" target="_blank" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" target="_blank" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" target="_blank" href="#certificates">Certifications</a>
+                    <a class="nav-link js-scroll-trigger" target="_blank" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" target="_blank" href="#experience">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" target="_blank" href="#projects">Projects</a>
+                    <a class="nav-link js-scroll-trigger" target="_blank" href="#certificates">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" target="_blank" href="#education">Education</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" target="_blank" href="#skills">Skills</a>
@@ -97,75 +110,168 @@
                 </ul>
             </div>
         </section>
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
             <div class="my-auto">
-                <h2 class="mb-5">Education</h2>
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">SRM Institute of Science and Technology</h3>
-                        <div class="subheading mb-3">Bachelor of Technology</div>
-                        <div>Information Technology</div>
-                        <p></p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2015 - 2019</span>
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">BMC Matric. Hr. Sec. School</h3>
-                        <div class="subheading mb-3">HSS PCM Stream</div>
-                        <p>Aggregate : 84.08%</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">March 2015</span>
+                <h2 class="mb-5">Projects</h2>
+                <div class="container">
+                    
+                    <div class='row p-5'>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('All')">All</button></div>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('Windows')">Windows</button></div>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('full-stack')">Full Stack</button></div>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('front-end')">Front End</button></div>
+                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('Android')">Android</button></div>
                     </div>
                 </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">BMC Matric. Hr. Sec. School</h3>
-                        <div class="subheading mb-3">SSLC</div>
-                        <p>Aggregate : 91.60%</p>
+                <div id="full-stack">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 full-stack">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://url-shortener-frontend.netlify.app/">URL Shortener</a></h3> 
+                            <div class="subheading mb-2">NodeJS, Expressjs, Angular, mongoDb</div><a target="_blank" href="https://github.com/Vetox/urlshortener-frontend" >Front End Code</a> || <a target="_blank" href="https://github.com/Vetox/urlshortener-backend" >Back End Code</a>
+                            <p><div>A simple URL Shortener built on the MEAN stack with user authentication and url visits tracking.</div>
+                        </div>
+                        <div class="resume-date">
+                            <img src="img/urlShortThumbnail.png" style="height:150px; width:250px; border:2px solid orange" class="zoom"/>
+                        </div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">March 2013</span>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 full-stack">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://nifty-hamilton-1bedd6.netlify.app/login">Simple CRM Tool</a></h3> 
+                            <div class="subheading mb-2">NodeJS, Expressjs, Angular, mongoDb</div><a target="_blank" href="https://github.com/Vetox/node-crm-frontend" >Front End Code</a> || <a target="_blank" href="https://github.com/Vetox/node-crm-fullstack" >Back End Code</a>
+                            <p><div>A basic CRM tool which demonstrates CRUD operations in mongoDB and role management handled in the nodejs backend.</div>
+                        </div>
+                        <div class="resume-date">
+                            <img src="img/crm.png" style="height:150px; width:250px; border:2px solid orange" class="zoom"/>
+                        </div>
+                    </div>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 full-stack">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/nodeSocketTest">Socket Based Cloud Chat Application</a></h3>
+                            <div class="subheading mb-2">nodeJS, expressjs, Sockets.io</div>
+                            <div>A sockets.io based chat application built with nodejs and expressjs.</div>
+                        </div>
                     </div>
                 </div>
+                <div id="front-end">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 front-end">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://covid19-visualizer-karthikeyanm.netlify.app/">India COVID-19 Tracker</a></h3>
+                            <div class="subheading mb-2">Angular, Google Charts</div>
+                            <a target="_blank" href="https://github.com/Vetox/covid19-visualizer-KarthikeyanM">Front End Code</a>
+                            <div>A simple implementation of Google Charts on up to date COVID-19 stats across India to visualize spread trends.</div>
+                        </div>
+                        <div class="resume-date">
+                            <img src="img/covidTrackerThumbnail.png" style="height:150px; width:250px; border:2px solid orange" class="zoom"/>
+                        </div>
+                    </div>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 front-end">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://distracted-mestorf-b28d34.netlify.app/topstories">New York Times Top Stories Page</a></h3>
+                            <div class="subheading mb-2">Bootstrap, Javascript</div>
+                            <a target="_blank" href="https://github.com/Vetox/Vetox/blob/master/topStories.html">Front End Code</a>
+                            <div>A simple demonstration of Bootstrap and Javascript to retrieve top stories from the New York Times' front page.</div>
+                        </div>
+                        <div class="resume-date">
+                            <img src="img/nytThumbnail.png" style="height:150px; width:250px; border:2px solid orange" class="zoom"/>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 front-end">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://simple-angular-notes-app.netlify.app/">Simple Angular Notes App</a></h3>
+                            <div class="subheading mb-2">Angular, Bootstrap</div>
+                            <a target="_blank" href="https://github.com/Vetox/angularNotesApp">Front End Code</a>
+                            <div>A simple demonstration of Angulars component features to create a purely front end note taking app.</div>
+                        </div>
+                        <div class="resume-date">
+                            <img src="img/notes.png" style="height:150px; width:250px; border:2px solid orange" class="zoom"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="Windows">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/Virtual-On-Screen-Drum">Virtual On-Screen Drums</a></h3>
+                            <div class="subheading mb-2">OpenCV, Java</div>
+                            <a target="_blank" href='http://www.iamkarthi.com/opencv-experiment-virtual-on-screen-drums/'>Blog Post</a>
+                            <div>A computer vision application which produces realistic drum beats according to
+                                the speed at which you hit a virtual drum on the screen.</div>
+                        </div>
+                        <div class="resume-date">
+                            <img src="img/drumsThumbnail.png" style="height:150px; width:250px; border:2px solid orange" class="zoom"/>
+                        </div>
+                    </div>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/MouseMacroMaker">Mouse Macro Maker</a></h3>
+                            <div class="subheading mb-2">jNativeHook, Java</div>
+                            <a target="_blank" href='http://www.iamkarthi.com/tutorial-mouse-macro-maker-using-jnativehook/'>Blog Post</a>
+                            <div>A windows application using jnativehook to implement a native mouse macro
+                                recorder with payback and edit features. Compatible with all native applications
+                                across Windows.</div>
+                            
+                        </div>
+                        <div class="resume-date">
+                            <img src="img/macro.png" style="height:150px; width:250px; border:2px solid orange" class="zoom"/>
+                        </div>
+                    </div>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/electron-video-converter">Electron MP4 to HLS converter</a></h3>
+                            <div class="subheading mb-2">NodeJS, Angular, Electron, ffmpeg</div>
+                            <div>A cross-platform video converter application to convert mp4 to .m3u8 format using FFMPEG.</div>
+                        </div>
+                        <div class="resume-date">
+                            <img src="img/electron.png" style="height:150px; width:250px; border:2px solid orange" class="zoom"/>
+                        </div>
+                    </div>
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/SpellingBeeTrainer">Spelling Bee Trainer</a></h3>
+                            <div class="subheading mb-2">Java</div>
+                            <a target="_blank" href='http://www.iamkarthi.com/java-dictionary-application-using-json/'>Blog Post</a>
+                            <div>A Java based spelling bee trainer written to help students prepare for the Spartan Spelling Bee.</div>
+                        </div>
+                        <div class="resume-date">
+                            <img src="img/spb.png" style="height:150px; width:250px; border:2px solid orange" class="zoom"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="Android">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Android">
+                        <div class="resume-content mr-auto">
+                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/OnlineDictionary">Android Dictionary</a></h3>
+                            <div class="subheading mb-2">Java, Android SDK</div>
+                            <div>An Android Dictionary app. Retrieves definitions of words from dictionary.com's free API.</div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="certificates">
-            <div class="my-auto">
-                <h2 class="mb-5">Certifications</h2>
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">CodeChef Certified Data Structure & Algorithms Programme Foundation Exam</h3>
-                        <div class="subheading mb-3">Offered by : CodeChef</div>
-                        <div>
-                        <p>Handle : xvetox
-                        <p>Score : 750 / 750
-                        <p>License ID: 846b3cc</div>
-                        <p><a target="_blank" href='https://www.codechef.com/certificates/verify'>Verify Certificate</a></p>
-                        <p></p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Jan 2018 - Mar 2018</span>
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Divide And Conquer, Sorting, Searching, And Randomized Algorithms By Stanford University On Coursera</h3>
-                        <div class="subheading mb-3">Coursera Course Offered By Stanford University, Online</div>
-                        <p>Grade : 90.8</p>
-                        <p>Certificate ID : UR45WQ4P58WU</p>
-                        <p><a target="_blank" href='https://github.com/Vetox/Vetox.github.io/raw/master/Coursera%20UR45WQ4P58WU.pdf'>Download Certificate</a></p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Sep 2017 - Oct 2017</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <script>
+            function filter(val){
+                $("#Android").hide();
+                $("#Windows").hide();
+                $("#full-stack").hide();
+                $("#front-end").hide();
+                if(val === "All"){
+                    $("#Android").show();
+                    $("#Windows").show();
+                    $("#full-stack").show();
+                    $("#front-end").show();
+                }
+                else{
+                    $("#" + val ).show();    
+                }
+            }
+        </script>
+
+        
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
             <div class="my-auto">
                 <h2 class="mb-5">Experience</h2>
@@ -211,118 +317,80 @@
                 </div>
             </div>
         </section>
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+
+
+        
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="certificates">
             <div class="my-auto">
-                <h2 class="mb-5">Projects</h2>
-                <div class="container">
-                    
-                    <div class='row p-5'>
-                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('All')">All</button></div>
-                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('Windows')">Windows</button></div>
-                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('full-stack')">Full Stack</button></div>
-                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('front-end')">Front End</button></div>
-                        <div class="col-lg-2"><button class='btn btn btn-outline-danger' onclick="filter('Android')">Android</button></div>
+                <h2 class="mb-5">Certifications</h2>
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">CodeChef Certified Data Structure & Algorithms Programme Foundation Exam</h3>
+                        <div class="subheading mb-3">Offered by : CodeChef</div>
+                        <div>
+                        <p>Handle : xvetox
+                        <p>Score : 750 / 750
+                        <p>License ID: 846b3cc</div>
+                        <p><a target="_blank" href='https://www.codechef.com/certificates/verify'>Verify Certificate</a></p>
+                        <p></p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jan 2018 - Mar 2018</span>
                     </div>
                 </div>
-                <div id="full-stack">
-                    <div class="resume-item d-flex flex-column flex-md-row mb-3 full-stack">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a target="_blank" href="https://url-shortener-frontend.netlify.app/">URL Shortener</a></h3>
-                            <div class="subheading mb-2">NodeJS, Expressjs, Angular, mongoDb</div>
-                            <div>A simple URL Shortener built on the MEAN stack with user authentication and url visits tracking.</div>
-                        </div>
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Divide And Conquer, Sorting, Searching, And Randomized Algorithms By Stanford University On Coursera</h3>
+                        <div class="subheading mb-3">Coursera Course Offered By Stanford University, Online</div>
+                        <p>Grade : 90.8</p>
+                        <p>Certificate ID : UR45WQ4P58WU</p>
+                        <p><a target="_blank" href='https://github.com/Vetox/Vetox.github.io/raw/master/Coursera%20UR45WQ4P58WU.pdf'>Download Certificate</a></p>
                     </div>
-                    <div class="resume-item d-flex flex-column flex-md-row mb-3 full-stack">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/nodeSocketTest">Socket Based Cloud Chat Application</a></h3>
-                            <div class="subheading mb-2">nodeJS, expressjs, Sockets.io</div>
-                            <div>A sockets.io based chat application built with nodejs and expressjs.</div>
-                        </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Sep 2017 - Oct 2017</span>
                     </div>
                 </div>
-                <div id="front-end">
-                    <div class="resume-item d-flex flex-column flex-md-row mb-3 front-end">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a target="_blank" href="https://covid19-visualizer-karthikeyanm.netlify.app/">India COVID-19 Tracker</a></h3>
-                            <div class="subheading mb-2">Angular, Google Charts</div>
-                            <div>A simple implementation of Google Charts on up to date COVID-19 stats across India to visualize spread trends.</div>
-                        </div>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row mb-3 front-end">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a target="_blank" href="https://simple-angular-notes-app.netlify.app/">Simple Angular Notes App</a></h3>
-                            <div class="subheading mb-2">Angular, Bootstrap</div>
-                            <div>A simple demonstration of Angulars component features to create a purely front end note taking app.</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="Windows">
-                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/Virtual-On-Screen-Drum">Virtual On-Screen Drums</a></h3>
-                            <div class="subheading mb-2">OpenCV, Java</div>
-                            <div>A computer vision application which produces realistic drum beats according to
-                                the speed at which you hit a virtual drum on the screen.</div>
-                            <a target="_blank" href='http://www.iamkarthi.com/opencv-experiment-virtual-on-screen-drums/'><b>Blog Post</b></a>
-                        </div>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/MouseMacroMaker">Mouse Macro Maker</a></h3>
-                            <div class="subheading mb-2">jNativeHook, Java</div>
-                            <div>A windows application using jnativehook to implement a native mouse macro
-                                recorder with payback and edit features. Compatible with all native applications
-                                across Windows.</div>
-                            <p><a target="_blank" href='http://www.iamkarthi.com/tutorial-mouse-macro-maker-using-jnativehook/'><b>Blog Post</b></a>
-                        </div>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/electron-video-converter">Electron MP4 to HLS converter</a></h3>
-                            <div class="subheading mb-2">NodeJS, Angular, Electron, ffmpeg</div>
-                            <div>A cross-platform video converter application to convert mp4 to .m3u8 format using FFMPEG.</div>
-                        </div>
-                    </div>
-                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Windows">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/SpellingBeeTrainer">Spelling Bee Trainer</a></h3>
-                            <div class="subheading mb-2">Java</div>
-                            <div>A Java based spelling bee trainer written to help students prepare for the Spartan Spelling Bee.</div>
-                        </div>
-                    </div>
-                </div>
-                <div id="Android">
-                    <div class="resume-item d-flex flex-column flex-md-row mb-3 Android">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a target="_blank" href="https://github.com/Vetox/OnlineDictionary">Android Dictionary</a></h3>
-                            <div class="subheading mb-2">Java, Android SDK</div>
-                            <div>An Android Dictionary app. Retrieves definitions of words from dictionary.com's free API.</div>
-                            <a target="_blank" href='http://www.iamkarthi.com/java-dictionary-application-using-json/'><b>Blog Post</b></a>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </section>
 
-        <script>
-            function filter(val){
-                $("#Android").hide();
-                $("#Windows").hide();
-                $("#full-stack").hide();
-                $("#front-end").hide();
-                if(val === "All"){
-                    $("#Android").show();
-                    $("#Windows").show();
-                    $("#full-stack").show();
-                    $("#front-end").show();
-                }
-                else{
-                    $("#" + val ).show();    
-                }
-            }
-        </script>
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+            <div class="my-auto">
+                <h2 class="mb-5">Education</h2>
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">SRM Institute of Science and Technology</h3>
+                        <div class="subheading mb-3">Bachelor of Technology</div>
+                        <div>Information Technology</div>
+                        <p></p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">2015 - 2019</span>
+                    </div>
+                </div>
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">BMC Matric. Hr. Sec. School</h3>
+                        <div class="subheading mb-3">HSS PCM Stream</div>
+                        <p>Aggregate : 84.08%</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">March 2015</span>
+                    </div>
+                </div>
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">BMC Matric. Hr. Sec. School</h3>
+                        <div class="subheading mb-3">SSLC</div>
+                        <p>Aggregate : 91.60%</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">March 2013</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
             <div class="my-auto">
